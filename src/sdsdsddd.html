@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <script>
+    //z1----------------------------------
+    let x=parseInt(prompt("Podaj  x: "));
+    let y=parseInt(prompt("Podaj y: "));
+
+    if(x>y) document.write("X jest wiekszy!");
+    else if(x<y) document.write("Y jest wiekszy!");
+    else if(x==y) document.write("Wartosci sa takie same");
+    else document.write("Przynajmniej jedna z wartosci jest niepoprawna");
+
+    //z2----------------------------------
+    let a=parseInt(prompt("Podaj  a: "));
+    let b=parseInt(prompt("Podaj  b: "));
+    let c=parseInt(prompt("Podaj  c: "));
+
+    if((a*b*c)<0) document.write("Znak to -");
+    else if((a*b*c)>0) document.write("Znak to +");
+    else if((a*b*c)==0) document.write("Wynik to 0 wiec znak nie jest ani + ani -");
+
+    //z3----------------------------------
+    let d=parseInt(prompt("Podaj  d: "));
+    let e=parseInt(prompt("Podaj  e: "));
+    let f=parseInt(prompt("Podaj  f: "));
+    let tryy=0;
+
+    for(let i=0; i<=2; i++) {
+      if (d > e && d > f) {
+        document.write(" " + d + " ");
+        d = 0; tryy++;
+      } else if (e > d && e > f) {
+        document.write(" " + e + " ");
+        e = 0; tryy++;
+      } else if (f > e && f > d) {
+        document.write(" " + f + " ");
+        f = 0; tryy++;
+      }//-------------
+      else if (f == e && tryy==0) {
+        document.write(" " + f + " " + e + "");
+        f = 0;
+        e = 0;
+        tryy++;
+      } else if (f == d && tryy==0) {
+        document.write(" " + f + " " + d + "");
+        f = 0;
+        d = 0;
+        tryy++;
+      } else if (e == d && tryy==0) {
+        document.write(" " + e + " " + d + "");
+        e = 0;
+        d = 0;
+        tryy++;
+      }//-------------
+      else if (e == d && d == f && tryy==0) {
+        document.write(f + " " + e + " " + d);
+        tryy++;
+      }
+    }
+
+    //z4----------------------------------
+    let g=parseInt(prompt("Podaj  g: "));
+    let h=parseInt(prompt("Podaj  h: "));
+    let ii=parseInt(prompt("Podaj  ii: "));
+    let j=parseInt(prompt("Podaj  j: "));
+    let k=parseInt(prompt("Podaj  k: "));
+
+    if( g>h && g>ii && g>j &&g>k) document.write("g jest najwieksze!");
+    else if( h>g && h>ii && h>j && h>k) document.write("h jest najwieksze!");
+    else if(ii>h && ii>g && ii>j && ii>k) document.write("i jest najwieksze!");
+    else if(j>h && j>ii && j>g && j>k) document.write("j jest najwieksze!");
+    else if(k>g && k>ii && k>j && k>g) document.write("k jest najwieksze!");
+    else document.write("Nie ma najwiekszej liczby, przynajmniej 2 sa takie same lub ich wartosci sa bledne");
+  </script>
+</head>
+<body>
+
+</body>
+</html>
